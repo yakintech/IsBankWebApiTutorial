@@ -87,10 +87,27 @@ namespace IsBankWebApiTutorial.Controllers
                 db.Customers.Add(newCustomer);
                 db.SaveChanges();
 
-                return NotFound();
+                return Ok(newCustomer);
             }
         }
 
 
+        [HttpPatch]
+        public IActionResult Patch(Customer customer)
+        {
+            var customerCheck = db.Customers.Any(q => !q.IsDeleted && q.Id == customer.Id);
+
+            if (customerCheck)
+            {
+                db.Customers.Update(customer);
+                db.SaveChanges();
+                return Ok(customer);
+            }
+            else
+            {
+                return NotFound();
+            }
+
+        }
     }
 }
