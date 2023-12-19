@@ -15,5 +15,11 @@ namespace IsBankWebApiTutorial.Models.ORM
         public Category? Category { get; set; }
 
 
+        public int SupplierId { get; set; }
+
+        [ForeignKey("SupplierId")]
+        public Supplier Supplier { get; set; }
+
+
     }
 }

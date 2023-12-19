@@ -4,6 +4,7 @@ using IsBankWebApiTutorial.Models.ORM;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IsBankWebApiTutorial.Migrations
 {
     [DbContext(typeof(IsBankDbContext))]
-    partial class IsBankDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231219103432_supplierTableProductJoin2")]
+    partial class supplierTableProductJoin2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -178,14 +180,6 @@ namespace IsBankWebApiTutorial.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CompanyName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ContactName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ContactTitle")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

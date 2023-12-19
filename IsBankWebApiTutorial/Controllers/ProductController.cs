@@ -26,7 +26,20 @@ namespace IsBankWebApiTutorial.Controllers
                     UnitsInStock = x.UnitsInStock,
                     Description = x.Description,
                     Id = x.Id,
-                    AddDate = x.AddDate
+                    AddDate = x.AddDate,
+                    Category = new GetCategoryDto()
+                    {
+                        Name = x.Category.Name,
+                        Id = x.Category.Id,
+                    },
+                    Supplier = new GetSupplierDto()
+                    {
+                        CompanyName = x.Supplier.CompanyName,
+                        ContactName = x.Supplier.ContactName,
+                        Id = x.Supplier.Id
+                    }
+                    
+                    
                 }).ToList();
 
             return Ok(response);
