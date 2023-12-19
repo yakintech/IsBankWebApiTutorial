@@ -4,6 +4,7 @@ using IsBankWebApiTutorial.Models.ORM;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IsBankWebApiTutorial.Migrations
 {
     [DbContext(typeof(IsBankDbContext))]
-    partial class IsBankDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231219113559_IdentityContextAdded")]
+    partial class IdentityContextAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

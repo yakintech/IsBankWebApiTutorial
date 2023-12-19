@@ -1,9 +1,11 @@
 ﻿using IsBankWebApiTutorial.Models.DTO;
 using IsBankWebApiTutorial.Models.ORM;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IsBankWebApiTutorial.Controllers
 {
+
     [ApiController]
     [Route("api/[controller]")]
     public class ProductController : ControllerBase
