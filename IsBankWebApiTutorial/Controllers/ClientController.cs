@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace IsBankWebApiTutorial.Controllers
 {
     //bir user api/client dedigi an bu controller icerisine duser
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ClientController : ControllerBase
     {
         List<string> clients;

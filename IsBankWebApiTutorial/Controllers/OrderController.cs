@@ -1,4 +1,5 @@
 ﻿using IsBankWebApiTutorial.Models.ORM;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,6 +7,7 @@ namespace IsBankWebApiTutorial.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class OrderController : ControllerBase
     {
         IsBankDbContext db;

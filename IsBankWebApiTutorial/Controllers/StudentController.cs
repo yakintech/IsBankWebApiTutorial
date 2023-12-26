@@ -1,10 +1,12 @@
 ﻿using IsBankWebApiTutorial.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IsBankWebApiTutorial.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class StudentController : ControllerBase
     {
         List<Student> students;

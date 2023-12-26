@@ -6,9 +6,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using IsBankWebApiTutorial.Models.ORM;
+using Microsoft.AspNetCore.Authorization;
 
 namespace IsBankWebApiTutorial.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase
